@@ -1,0 +1,277 @@
+:root {
+  --red: hsl(354, 70%, 54%);
+  --orange: hsl(27, 98%, 54%);
+  --yellow: hsl(45, 100%, 51%);
+  --green: hsl(152, 69%, 31%);
+  --cyan: hsl(190, 90%, 50%);
+
+  --primary: hsl(173, 100%, 29%);
+  --secondary: hsl(173, 54%, 76%);
+  --accent: hsl(173, 44%, 59%);
+  --success: var(--green);
+  --info: var(--cyan);
+  --warning: var(--yellow);
+  --danger: var(--red);
+
+  --primary-rgb: 0, 148, 131;
+  --secondary-rgb: 161, 227, 219;
+  --accent-rgb: 104, 196, 186;
+
+  --gray-100: hsl(210, 17%, 98%);
+  --gray-200: hsl(210, 16%, 93%);
+  --gray-300: hsl(210, 14%, 89%);
+  --gray-400: hsl(210, 14%, 83%);
+  --gray-500: hsl(210, 11%, 71%);
+  --gray-600: hsl(208, 7%, 46%);
+  --gray-700: hsl(210, 9%, 31%);
+  --gray-800: hsl(210, 10%, 23%);
+  --gray-900: hsl(210, 11%, 15%);
+
+  --body-color: var(--gray-900);
+  --body-bg: #fff;
+  --poppins-font: "Poppins", sans-serif, Arial, Helvetica;
+}
+
+/* ------- 
+Global Styles
+------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  color: var(--body-color);
+  background: var(--body-bg);
+  line-height: 25px;
+  font-family: var(--poppins-font);
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: var(--accent);
+  transition: 0.3s ease;
+  cursor: pointer;
+  background: transparent;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: var(--secondary);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+.main {
+  margin-top: 60px;
+}
+
+@media (max-width: 767px) {
+  .main {
+    margin-top: 50px;
+  }
+}
+
+
+/* ------- 
+Header
+------- */
+header.header {
+  line-height: 1em;
+  background: var(--primary);
+}
+
+/* ------- 
+Nav-Menu
+------- */
+.nav-menu {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .nav-menu {
+    height: 50px;
+  }
+}
+
+.nav-menu-toggler {
+  background: transparent;
+  display: block;
+  height: 28px;
+  width: 28px;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-menu-toggler > .bar {
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  display: inline-block;
+  border-radius: 0.25rem;
+  position: absolute;
+  transition: 0.3s ease;
+}
+
+.nav-menu-toggler > .first {
+  top: 4px;
+}
+
+.nav-menu-toggler > .middle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-menu-toggler > .last {
+  bottom: 4px;
+}
+
+.nav-menu-toggler.active > .first {
+  top: 13px;
+  transform: rotate(45deg);
+}
+.nav-menu-toggler.active > .middle {
+  opacity: 0;
+}
+.nav-menu-toggler.active > .last {
+  bottom: 12px;
+  transform: rotate(-45deg);
+}
+
+.nav-menu-logo > h3 {
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.nav-menu-list {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.nav-menu-list-item {
+  padding: 12px 20px;
+}
+
+.nav-menu-list .nav-a {
+  font-size: 14px;
+  color: #fff;
+}
+
+.nav-menu-list .nav-a:hover,
+.nav-menu-list .nav-a.active {
+  color: var(--secondary);
+}
+
+@media (max-width: 991px) {
+  .nav-menu {
+    position: relative;
+  }
+
+  .nav-menu-list {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    position: fixed;
+    top: 46px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .nav-menu-list.open {
+    opacity: 1;
+    pointer-events: initial;
+  }
+
+  .nav-menu-list .nav-a {
+    font-size: 16px;
+  }
+}
+/* End Nav-Menu  */
+
+/* ------- 
+Hero Section
+------- */
+.hero {
+  padding-top: 80px;
+  margin-bottom: 50px;
+  background: var(--primary)
+    url("../img/milad-fakurian-PGdW_bHDbpI-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .hero {
+    padding-top: 12px;
+  }
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(var(--primary-rgb), 0.7);
+}
+
+.hero-text {
+  padding-top: 4rem;
+  color: #fff;
+}
+
+.hero-subtext {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: 0.4px;
+}
+
+@media (max-width: 575px) {
+  .hero-title {
+    font-size: 38px;
+  }
+}
+
+.hero-desc {
+  font-size: 14px;
+  line-height: 2;
+}
+
+.hero-img {
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+}
