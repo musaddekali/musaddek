@@ -78,6 +78,10 @@ section {
   padding-bottom: 60px;
 }
 
+.section-bg {
+  background-color: rgba(var(--primary-rgb), 0.06);
+}
+
 .section-title {
   margin-bottom: 30px;
 }
@@ -85,9 +89,10 @@ section {
 .section-title h2 {
   padding-bottom: 0.5rem;
   font-size: 28px;
-  font-weight: 400;
+  font-weight: 700;
   border-bottom: 2px solid var(--primary);
   display: inline-block;
+  color: var(--gray-700);
 }
 
 .main {
@@ -369,4 +374,60 @@ Services
   margin-bottom: 0;
   font-size: 15px;
   line-height: 28px;
+}
+
+/* ------- 
+Skills
+------- */
+.skill {
+  width: 100%;
+  display: flex;
+  padding: 1.25rem;
+  border-radius: 0.25rem;
+  border-left: 3px solid var(--primary);
+  background: rgba(var(--primary-rgb), 0.08);
+  transition: 0.3s;
+}
+
+.skill:hover {
+  transform: scale(1.01);
+}
+
+.skill:hover .skill-icon {
+  color: rgba(var(--primary-rgb), 0.6);
+}
+
+.skill-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: var(--gray-700);
+  transition: 0.3s;
+}
+
+.skill-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 1rem;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 6px 12px;
+  border-radius: 0.25rem;
+  font-size: .875rem;
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  transition: 0.3s;
+  cursor: default;
+}
+
+.skill-item:hover {
+  background: rgba(var(--primary-rgb), 0.6);
 }
