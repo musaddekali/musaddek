@@ -73,6 +73,23 @@ section {
   overflow: hidden;
 }
 
+.section-padding {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.section-title {
+  margin-bottom: 30px;
+}
+
+.section-title h2 {
+  padding-bottom: 0.5rem;
+  font-size: 28px;
+  font-weight: 400;
+  border-bottom: 2px solid var(--primary);
+  display: inline-block;
+}
+
 .main {
   margin-top: 60px;
 }
@@ -241,11 +258,11 @@ Hero Section
 ------- */
 .hero {
   padding-top: 80px;
-  margin-bottom: 50px;
-  background: var(--primary)
-    url("../img/hero-bg.png");
+  margin-bottom: 30px;
+  background: var(--primary) url("../img/hero-bg.png");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   position: relative;
 }
 
@@ -312,5 +329,44 @@ Hero Section
   text-align: center;
 }
 
-@media (max-width: 991px) {
+/* ------- 
+Services
+------- */
+
+.service-card {
+  padding: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.3s ease;
+  /* box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%); */
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 10%);
+}
+.service-card:hover {
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+}
+.service-card-icon {
+  width: 75px;
+  height: 75px;
+  margin-bottom: 20px;
+  font-size: 32px;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  background: rgba(var(--primary-rgb), 0.21);
+}
+
+.service-card-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  text-transform: capitalize;
+}
+
+.service-card-desc {
+  margin-bottom: 0;
+  font-size: 15px;
+  line-height: 28px;
 }
