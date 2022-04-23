@@ -436,6 +436,10 @@ Skills
 /* ------- 
 Projects
 ------- */
+.projects {
+  padding-bottom: 20px;
+}
+
 .prj-card {
   box-shadow: var(--primary-shadow-sm);
   border-radius: 0.25rem;
