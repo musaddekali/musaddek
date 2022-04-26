@@ -696,6 +696,10 @@ Footer
   color: #fff;
 }
 
+.back-to-top span {
+  font-size: 20px;
+}
+
 .back-to-top:hover {
-  background: var(--accent);
+  background: rgba(var(--primary-rgb), 0.8);
 }
